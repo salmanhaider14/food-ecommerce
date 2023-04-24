@@ -9,6 +9,7 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
+  const [user, setuser] = useState();
 
   let foundProduct;
   let index;
@@ -18,13 +19,11 @@ export const StateContext = ({ children }) => {
       (item) => item._id === product._id
     );
 
-    // setTotalPrice(
-    //   (prevTotalPrice) => prevTotalPrice + product.price * quantity
-    // );
+    setTotalPrice(
+      (prevTotalPrice) => prevTotalPrice + product.price * quantity
+    );
 
-    setTotalPrice(totalPrice + product.price * quantity);
-    // setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
-    setTotalQuantities(totalQuantities + quantity);
+    setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
 
     if (checkProductInTheCart) {
       const updatedCartItems = cartItems.map((cartProduct) => {
@@ -84,19 +83,12 @@ export const StateContext = ({ children }) => {
   };
 
   const incQty = () => {
-    // setQty((prevQty) => prevQty + 1);
-    setQty(qty + 1);
+    setQty((prevQty) => prevQty + 1);
   };
   const decQty = () => {
-    // setQty((prevQty) => {
-    //   if (prevQty - 1 < 1) return 1;
-    //   return prevQty - 1;
-    // });
-
-    setQty((qty) => {
-      if (qty - 1 < 1) return 1;
-
-      return qty - 1;
+    setQty((prevQty) => {
+      if (prevQty - 1 < 1) return 1;
+      return prevQty - 1;
     });
   };
 
@@ -118,6 +110,8 @@ export const StateContext = ({ children }) => {
         setCartItems,
         setTotalPrice,
         setTotalQuantities,
+        user,
+        setuser,
       }}
     >
       {children}

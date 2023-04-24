@@ -750,3 +750,34 @@ span.text-red {
     margin: auto;
   }
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.form-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.register-page {
+  width: 100%;
+}
+
+.form-control {
+  border-radius: 4px;
+  padding: 10px;
+  border: 0.3px solid grey;
+  width: 200px;
+}
+
+.alert {
+  margin-bottom: 20px;
+}
+
+.alert-danger {
+  color: red;
+}
