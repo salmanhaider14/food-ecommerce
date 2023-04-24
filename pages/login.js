@@ -10,7 +10,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState(null);
-  const { user, setuser } = useStateContext();
+
   const router = useRouter();
 
   const handleSubmit = async (e) => {
@@ -20,7 +20,6 @@ const LoginPage = () => {
       await signInWithEmailAndPassword(auth, email, password).then(
         (userCredential) => {
           const user = userCredential.user;
-          setuser(user);
         }
       );
 
@@ -29,6 +28,7 @@ const LoginPage = () => {
     } catch (error) {
       setErrors(error.message);
     }
+
     setEmail("");
     setPassword("");
   };

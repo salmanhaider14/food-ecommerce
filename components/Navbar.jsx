@@ -1,7 +1,11 @@
 import React from "react";
 
 import Link from "next/link";
-import { AiOutlineLogout, AiOutlineShopping } from "react-icons/ai";
+import {
+  AiOutlineLogout,
+  AiOutlineShopping,
+  AiOutlineUser,
+} from "react-icons/ai";
 import Cart from "./Cart";
 import { useStateContext } from "../contexts/StateContext";
 import { auth } from "../firebase";
@@ -10,9 +14,12 @@ import { StateContext } from "../contexts/StateContext";
 
 function Navbar() {
   const { showCart, setShowCart, totalQuantities, setuser } = useStateContext();
+  const route = useRouter();
 
-  const handleLogout = () => {
-    setuser(null);
+  const handleLogout = async () => {
+    await auth.signOut();
+    route.push("/login");
+
     alert("User successfully signed out");
   };
 
@@ -23,6 +30,9 @@ function Navbar() {
       </p>
 
       <AiOutlineLogout onClick={handleLogout} color="red" size={25} />
+      <Link href={"/profile"}>
+        <AiOutlineUser size={25} />
+      </Link>
 
       <button
         type="button"

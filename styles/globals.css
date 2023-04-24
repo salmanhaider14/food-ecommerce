@@ -105,12 +105,12 @@ span.text-red {
 }
 .product-card {
   cursor: pointer;
-  transform: scale(1, 1);
+  transform: scale(0.8, 0.8);
   transition: transform 0.5s ease;
   color: #324d67;
 }
 .product-card:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1, 1);
 }
 .product-image {
   border-radius: 15px;

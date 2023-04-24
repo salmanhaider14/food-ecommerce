@@ -4,9 +4,11 @@ import { Product, FooterBanner, HeroBanner } from "../components";
 import { client } from "../lib/client";
 import { useStateContext } from "../contexts/StateContext";
 import LoginPage from "./login";
+import { auth } from "../firebase";
 
 const Home = ({ products, bannerData }) => {
   const { user } = useStateContext();
+  console.log(user);
   return (
     <>
       {user ? (

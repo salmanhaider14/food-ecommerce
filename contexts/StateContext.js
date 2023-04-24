@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { auth } from "../firebase";
 
 const Context = createContext();
 
@@ -9,7 +10,7 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
-  const [user, setuser] = useState();
+  const user = auth.currentUser;
 
   let foundProduct;
   let index;
@@ -111,7 +112,6 @@ export const StateContext = ({ children }) => {
         setTotalPrice,
         setTotalQuantities,
         user,
-        setuser,
       }}
     >
       {children}
