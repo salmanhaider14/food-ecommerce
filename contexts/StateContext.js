@@ -10,7 +10,7 @@ export const StateContext = ({ children }) => {
   const [totalPrice, setTotalPrice] = useState(0);
   const [totalQuantities, setTotalQuantities] = useState(0);
   const [qty, setQty] = useState(1);
-  const user = auth.currentUser;
+  const [user, setUser] = useState();
 
   let foundProduct;
   let index;
@@ -93,6 +93,11 @@ export const StateContext = ({ children }) => {
     });
   };
 
+  useEffect(() => {
+    const User = JSON.parse(localStorage.getItem("user"));
+    setUser(User);
+  }, []);
+
   return (
     <Context.Provider
       value={{
@@ -112,6 +117,7 @@ export const StateContext = ({ children }) => {
         setTotalPrice,
         setTotalQuantities,
         user,
+        setUser,
       }}
     >
       {children}

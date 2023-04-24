@@ -10,6 +10,7 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState(null);
+  const { setUser } = useStateContext();
 
   const router = useRouter();
 
@@ -20,6 +21,8 @@ const LoginPage = () => {
       await signInWithEmailAndPassword(auth, email, password).then(
         (userCredential) => {
           const user = userCredential.user;
+          localStorage.setItem("user", JSON.stringify(user));
+          setUser(user);
         }
       );
 
