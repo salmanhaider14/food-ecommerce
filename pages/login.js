@@ -5,6 +5,7 @@ import { useStateContext } from "../contexts/StateContext";
 import { useRouter } from "next/router";
 import { route } from "next/dist/server/router";
 import Link from "next/link";
+import { AiOutlineUser } from "react-icons/ai";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -38,9 +39,13 @@ const LoginPage = () => {
 
   return (
     <>
+      <head>
+        <title>Login</title>
+      </head>
       <div className="register-page">
         <h1>Login</h1>
         <form onSubmit={handleSubmit}>
+          <AiOutlineUser size={50} />
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
@@ -65,7 +70,7 @@ const LoginPage = () => {
             Don't have any account ? <Link href={"/register"}>Register</Link>
           </p>
           {errors && <div className="alert alert-danger">{errors}</div>}
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btne">
             Login
           </button>
         </form>

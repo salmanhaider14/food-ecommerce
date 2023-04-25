@@ -11,6 +11,9 @@ const Home = ({ products, bannerData }) => {
   console.log(user);
   return (
     <>
+      <head>
+        <title>Foodie Web</title>
+      </head>
       {user ? (
         <div>
           <HeroBanner heroBanner={bannerData.length && bannerData[0]} />

@@ -3,6 +3,7 @@ import { auth } from "../firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { AiOutlineUser } from "react-icons/ai";
 
 const RegisterPage = () => {
   const [username, setUsername] = useState("");
@@ -38,9 +39,13 @@ const RegisterPage = () => {
 
   return (
     <>
+      <head>
+        <title>Register</title>
+      </head>
       <div className="register-page">
         <h1>Register</h1>
         <form onSubmit={handleSubmit}>
+          <AiOutlineUser size={50} />
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <input
@@ -85,7 +90,7 @@ const RegisterPage = () => {
             Already have an account ? <Link href={"/login"}>Login</Link>
           </p>
           {errors && <div className="alert alert-danger">{errors}</div>}
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btne">
             Register
           </button>
         </form>

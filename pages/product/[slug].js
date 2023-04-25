@@ -23,6 +23,9 @@ function ProductDetails({ product, products }) {
 
   return (
     <div>
+      <head>
+        <title>{product.name}</title>
+      </head>
       {user ? (
         <div>
           <div className="product-detail-container">
