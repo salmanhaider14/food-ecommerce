@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Foodie Web - Next.js E-commerce App
 
-## Getting Started
+Welcome to Foodie Web, a feature-rich e-commerce web app built with Next.js, Sanity, Stripe, Firebase, and Bootstrap. This application provides a delightful shopping experience, featuring user authentication, product listing, filtering, seamless product purchasing, and an aesthetically designed product details page. The integration of Stripe ensures secure and efficient payment processing.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies](#technologies)
+- [E-commerce Functions](#e-commerce-functions)
+- [Payment Integration](#payment-integration)
+- [Styling](#styling)
+- [Contribution](#contribution)
+- [Contact](#contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Introduction
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Foodie Web is an e-commerce web app developed with a focus on providing an exceptional user experience. Leveraging Next.js for the frontend, Sanity for content management, Stripe for payment processing, Firebase for user authentication, and Bootstrap for styling, this app offers a seamless and visually appealing shopping platform.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **User Authentication:**
+  - Secure user authentication using Firebase.
 
-## Learn More
+- **Product Listing:**
+  - Display a comprehensive list of products.
 
-To learn more about Next.js, take a look at the following resources:
+- **Filtering:**
+  - Allow users to filter products based on categories.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Product Purchasing:**
+  - Seamless and intuitive product purchasing flow.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Product Details Page:**
+  - Detailed product information, including images, descriptions, and specifications.
 
-## Deploy on Vercel
+## Technologies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The Foodie Web app incorporates the following technologies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Next.js:** A React framework for building scalable web applications.
+- **Sanity:** A headless CMS for content management and product data.
+- **Stripe:** Payment processing for secure and efficient transactions.
+- **Firebase:** Authentication service for user sign-up and login functionality.
+- **Bootstrap:** Frontend framework for responsive and stylish design.
+
+## E-commerce Functions
+
+1. **Product Listing:**
+   - Displays a list of all available products.
+
+2. **Filtering:**
+   - Implement filters for product categories.
+
+3. **Product Purchasing:**
+   - Add products to the shopping cart.
+   - Proceed through a smooth checkout process.
+
+4. **Product Details Page:**
+   - Displays detailed information about a specific product.
+
+## Payment Integration
+
+Foodie Web integrates Stripe for secure and efficient payment processing. Users can make purchases with confidence, knowing that their payment information is handled securely.
+
+## Styling
+
+The app is styled using CSS and Bootstrap, providing a clean and visually appealing user interface.
+
+## Contribution
+
+Contributions are welcome! If you have ideas for improvements, new features, or bug reports, please open an issue or submit a pull request. Refer to the [Contribution Guidelines](CONTRIBUTING.md) for more details.
+
+## Contact
+
+For any inquiries or feedback, please reach out to me at salmanpatrick5@gmail.com.
